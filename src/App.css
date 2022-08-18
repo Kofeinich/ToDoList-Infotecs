@@ -1,29 +1,16 @@
-$font-stack:    Helvetica, sans-serif;
-$font-stack-cursive:    Helvetica, cursive, sans-serif;
-$font-first-color: #dad1d1;
-$app-first-color: #424242;
-$app-second-color: #e59505;
-$app-third-color: #626161;
-$default-margin: auto;
-$width: 100vw;
-$height: 100vh;
-$font-size: 16px;
-$br: 2%;
-
-.app {
-  font: 100% $font-stack;
-  font-size: $font-size;
-  background: $app-first-color;
-  margin: $default-margin;
-  width: $width;
-  height: $height;
-  color: $font-first-color;
+.app, .work-space {
+  font: 100% Helvetica, sans-serif;
+  font-size: 16px;
+  background: #424242;
+  margin: auto;
+  width: 100vw;
+  height: 100vh;
+  color: #dad1d1;
   min-height: 667px;
   min-width: 687px;
 }
 
 .work-space {
-  @extend .app;
   vertical-align: middle;
   max-width: 800px;
   max-height: 800px;
@@ -31,29 +18,27 @@ $br: 2%;
   min-width: 420px;
   width: 60%;
   height: 60%;
-  border-radius: $br;
-  background: $app-third-color;
+  border-radius: 2%;
+  background: #626161;
 }
 
-.wrapper {
+.wrapper, .toolbar {
   display: flex;
   justify-content: space-between;
 }
 
-h1{
+h1, .title {
   font-size: 44px;
-  font:$font-stack-cursive;
+  font: Helvetica, cursive, sans-serif;
   text-align: center;
   padding: 15px 0;
 }
 
 .title {
-  @extend h1;
-  color: $app-second-color
+  color: #e59505;
 }
 
 .toolbar {
-  @extend .wrapper;
   height: 80px;
 }
 
@@ -62,14 +47,13 @@ h1{
   height: 48px;
   margin: auto 15px;
   border-radius: 4px;
-  border: 1px solid $app-second-color;
-  background: $app-second-color;
-  color: $font-first-color;
+  border: 1px solid #e59505;
+  background: #e59505;
+  color: #dad1d1;
 }
 
-
 .search {
-  background: $app-third-color;
+  background: #626161;
   position: relative;
   height: 48px;
   margin: auto 15px;
@@ -82,10 +66,10 @@ h1{
   height: 50px;
   top: 0;
   right: 0;
-  background: $app-second-color;
+  background: #e59505;
   border-bottom-right-radius: 10px;
   border-top-right-radius: 10px;
-  border: 1px solid $font-first-color;
+  border: 1px solid #dad1d1;
 }
 
 .search input {
@@ -97,21 +81,22 @@ h1{
   width: 0;
   padding: 0 48px 0 15px;
   border: none;
-  color: $font-first-color;
+  color: #dad1d1;
   border-bottom: 1px solid transparent;
   outline: none;
   background: transparent;
-  transition: .4s cubic-bezier(0, 0.8, 0, 1);
-
+  transition: 0.4s cubic-bezier(0, 0.8, 0, 1);
 }
+
 .search input:focus {
   width: 176px;
   margin-right: 12px;
   z-index: 1;
-  border-bottom: 1px solid $font-first-color;
-  border-top: 1px solid $font-first-color;
-  border-left: 1px solid $font-first-color;
+  border-bottom: 1px solid #dad1d1;
+  border-top: 1px solid #dad1d1;
+  border-left: 1px solid #dad1d1;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
 }
 
+/*# sourceMappingURL=App.css.map */
