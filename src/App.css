@@ -1,7 +1,7 @@
 .app, .work-space {
   font: 100% Helvetica, sans-serif;
   font-size: 16px;
-  background: #424242;
+  background: #656565;
   margin: auto;
   width: 100vw;
   height: 100vh;
@@ -20,11 +20,16 @@
   height: 60%;
   border-radius: 2%;
   background: #626161;
+  box-shadow: 0 0 30px #171616;
 }
 
-.wrapper, .toolbar {
+.flex-wrapper, .toolbar {
   display: flex;
   justify-content: space-between;
+}
+
+.grid-wrapper, .taskbar {
+  display: grid;
 }
 
 h1, .title {
@@ -40,6 +45,12 @@ h1, .title {
 
 .toolbar {
   height: 80px;
+  border-bottom: 2px solid #e59505;
+}
+
+.taskbar {
+  grid-template-columns: 1fr 2fr;
+  height: calc(100% - 80px);
 }
 
 .button {
@@ -97,6 +108,21 @@ h1, .title {
   border-left: 1px solid #dad1d1;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
+}
+
+.cards-wrapper {
+  height: calc(100% - 2px);
+  overflow: scroll;
+}
+
+.cards-edit {
+  background: #e59505;
+  height: calc(100% - 2px);
+  border-bottom-right-radius: 2%;
+}
+
+.formik {
+  margin: auto 0;
 }
 
 /*# sourceMappingURL=App.css.map */

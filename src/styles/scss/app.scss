@@ -1,7 +1,7 @@
 $font-stack:    Helvetica, sans-serif;
 $font-stack-cursive:    Helvetica, cursive, sans-serif;
 $font-first-color: #dad1d1;
-$app-first-color: #424242;
+$app-first-color: #656565;
 $app-second-color: #e59505;
 $app-third-color: #626161;
 $default-margin: auto;
@@ -33,12 +33,18 @@ $br: 2%;
   height: 60%;
   border-radius: $br;
   background: $app-third-color;
+  box-shadow: 0 0 30px #171616;
 }
 
-.wrapper {
+.flex-wrapper {
   display: flex;
   justify-content: space-between;
 }
+
+.grid-wrapper {
+  display: grid;
+}
+
 
 h1{
   font-size: 44px;
@@ -53,8 +59,15 @@ h1{
 }
 
 .toolbar {
-  @extend .wrapper;
+  @extend .flex-wrapper;
   height: 80px;
+  border-bottom: 2px solid $app-second-color
+}
+
+.taskbar {
+  @extend .grid-wrapper;
+  grid-template-columns: 1fr 2fr ;
+  height: calc(100% - 80px);
 }
 
 .button {
@@ -113,5 +126,21 @@ h1{
   border-left: 1px solid $font-first-color;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
+}
+
+.cards-wrapper {
+  height: calc(100% - 2px);
+  overflow: scroll;
+}
+
+.cards-edit{
+  background: $app-second-color;
+  height: calc(100% - 2px);
+  border-bottom-right-radius: $br;
+}
+
+
+.formik {
+  margin: auto 0;
 }
 

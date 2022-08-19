@@ -1,25 +1,16 @@
 import './App.css'
 import './styles/css/reset.css'
+import React from 'react';
+import WorkSpace from "./components/WorkSpace";
 
 function App() {
+
   return (
     <div className="app">
         <h1 className="title">
             To Do List
         </h1>
-        <div className='work-space'>
-            <div className="toolbar">
-                <button className="button">
-                    Add Task
-                </button>
-                <form className="search">
-                    <input type="text" placeholder="Искать здесь..."/>
-                    <button  type="submit">
-
-                    </button>
-                </form>
-            </div>
-        </div>
+        <WorkSpace/>
     </div>
   );
 }
